@@ -100,3 +100,38 @@ Los arrays pueden tener una, dos o tres dimensiones. Sin embargo, a medida que a
 Es importante destacar que, aunque los arrays son un tipo de lista en Python, las listas no son arrays. Los arrays tienen restricciones adicionales y solo pueden almacenar números y caracteres.
 
 Los arrays se utilizan en diversas aplicaciones, como los sprites en los videojuegos o los menús de opciones. A pesar de las funciones limitadas del módulo `array` en Python, es posible crear arrays personalizados para satisfacer necesidades específicas.
+
+## Clase Array Personalizada
+
+La clase `Array` es una implementación personalizada de un array en Python. Esta clase proporciona varias funcionalidades, incluyendo la capacidad de iterar sobre los elementos del array, acceder a elementos individuales y modificar elementos.
+
+Aquí está la descripción de los métodos de la clase `Array`:
+
+- `__init__(self, capacity, fill_value=None)`: Este método inicializa un nuevo array con una capacidad dada, llenando cada posición con un valor de relleno.
+
+- `__len__(self)`: Este método devuelve la longitud del array.
+
+- `__str__(self)`: Este método devuelve una representación en cadena del array.
+
+- `__iter__(self)`: Este método devuelve un iterador para el array, lo que permite iterar sobre los elementos del array.
+
+- `__getitem__(self, index)`: Este método permite acceder a un elemento del array en una posición específica.
+
+- `__setitem__(self, index, new_item)`: Este método permite modificar el valor de un elemento en una posición específica del array.
+
+Aquí hay un ejemplo de cómo usar la clase `Array`:
+
+```python
+my_array = Array(4, 'Hola')
+print(my_array, len(my_array), str(my_array), iter(my_array), my_array[0], my_array[1], my_array[2], my_array[3], sep='\n')
+```
+Print
+
+    ['Hola', 'Hola', 'Hola', 'Hola']
+    4
+    ['Hola', 'Hola', 'Hola', 'Hola']
+    <list_iterator object at 0x7f8f7452b2b0>
+    Hola
+    Hola
+    Hola
+    Hola
