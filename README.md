@@ -44,5 +44,40 @@ print(pyramid_sum(1, 10))
 ------------ 49
 -------- 52
 ---- 54
- 55
 55
+55
+```
+## Colecciones Incorporadas en Python
+
+- **Listas**: Propósito general, de índices con tamaños dinámicos. Ordenables `lista =[]`.
+  - Usaría las listas para almacenar una serie de números, una lista de palabras, y básicamente cualquier cosa.
+
+- **Tuplas**: Inmutables, no se pueden añadir más elementos. Útiles para constantes por ejemplo coordenadas, direcciones. Es de tipo secuencial. `tupla =()`.
+  - Las usaría cuando sé exactamente el tamaño que tendrán mis datos.
+
+- **Conjuntos**: Almacenan objetos no duplicados (Teoría de conjuntos), son de acceso rápido, aceptan operaciones lógicas, son desordenados. `set() conjunto={1,2,3,4}`.
+  - Usaría un casteo entre conjuntos y listas cuando quiero eliminar duplicados de una lista.
+
+- **Diccionarios**: Pares de llave-valor, arrays asociativos (hash maps), son desordenados, y muy rápidos para hacer consultas. `diccionario ={'Llave':"Valor"}`.
+  - Los usaría para almacenar datos, listas, objetos que perfectamente pueden volverse un dataframe, o un defaultdict.
+
+## Consideraciones sobre el uso de Colecciones en Python
+
+Es crucial entender cuándo es más apropiado utilizar una colección específica en Python, ya que esto puede afectar tanto el espacio en memoria que ocupa como la eficiencia de ciertas operaciones. Como regla general, se recomienda optar por tuplas en lugar de listas cuando los valores no necesiten ser modificados, ya que las tuplas ocupan menos espacio en memoria. De igual manera, los sets o diccionarios son preferibles para la búsqueda de elementos debido a su mayor velocidad.
+
+Este es un fragmento de código que muestra el tamaño en memoria de las diferentes estructuras de datos en Python:
+
+```python
+import sys
+
+collections = {"list": list(), "tuple": tuple(), "dict": dict(), "set": set()}
+
+for name, collection in collections.items():
+    print(f'{name} = {sys.getsizeof(collection)} bytes')
+```
+Resultados:
+
+    list = 56 bytes
+    tuple = 40 bytes
+    dict = 232 bytes
+    set = 216 bytes
