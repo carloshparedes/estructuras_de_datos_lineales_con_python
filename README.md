@@ -135,3 +135,52 @@ Print
     Hola
     Hola
     Hola
+
+# Proyecto de Nodos y Procesos
+
+Este proyecto es una demostración simple de cómo se pueden usar los nodos para representar una cadena de procesos. Cada nodo representa un proceso individual y el atributo `next` de cada nodo apunta al siguiente proceso en la cadena.
+
+## Código
+
+El código principal se encuentra en el archivo `node.py`. Aquí está una descripción de lo que hace cada parte del código:
+
+```python
+# Create the nodes (processes)
+process1 = Node("Start")
+process2 = Node("Load data")
+process3 = Node("Process data")
+process4 = Node("Save results")
+process5 = Node("End")
+```
+
+Esto crea cinco nodos, cada uno representando un proceso individual en la cadena de procesos.
+
+```python
+# Link the nodes
+process1.next = process2
+process2.next = process3
+process3.next = process4
+process4.next = process5
+```
+Esto enlaza los nodos juntos en una cadena. El atributo next de cada nodo apunta al siguiente nodo en la cadena.
+
+```python
+# Print the process chain
+current_node = process1
+while current_node is not None:
+    print(current_node.data)
+    current_node = current_node.next
+```
+Esto imprime cada proceso en la cadena en orden. Comienza con el primer nodo y sigue los enlaces next hasta que llega al final de la cadena.
+
+```python
+# Terminal
+------------------------------
+Start
+Load data
+Process data
+Save results
+End
+------------------------------
+```  
+Este proyecto es una forma simple pero efectiva de demostrar cómo se pueden usar los nodos para representar una cadena de procesos. Puede ser útil para entender conceptos como las listas enlazadas y las estructuras de datos basadas en nodos.
