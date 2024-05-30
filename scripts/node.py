@@ -3,6 +3,7 @@ class Node():
         self.data = data
         self.next = next
 
+'''
 print('-' * 30)
 
 # Create the nodes (processes)
@@ -25,6 +26,8 @@ while current_node is not None:
     current_node = current_node.next
     
 print('-' * 30)
+
+'''
 
 '''
 node3 = Node(3, None)
