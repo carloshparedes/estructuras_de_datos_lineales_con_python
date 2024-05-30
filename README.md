@@ -173,7 +173,7 @@ while current_node is not None:
 ```
 Esto imprime cada proceso en la cadena en orden. Comienza con el primer nodo y sigue los enlaces next hasta que llega al final de la cadena.
 
-```python
+```bash
 # Terminal
 ------------------------------
 Start
@@ -184,3 +184,56 @@ End
 ------------------------------
 ```  
 Este proyecto es una forma simple pero efectiva de demostrar cómo se pueden usar los nodos para representar una cadena de procesos. Puede ser útil para entender conceptos como las listas enlazadas y las estructuras de datos basadas en nodos.
+
+## `link_list.py` Implementación de Lista Enlazada Simple
+
+Este código implementa una lista enlazada simple en Python. Cada nodo en la lista contiene datos y un puntero al siguiente nodo en la lista. La lista mantiene un seguimiento de su cola (el primer nodo agregado) y su tamaño (el número de nodos).
+
+### Métodos de la Clase
+
+- `__init__`: Inicializa una nueva lista vacía.
+- `append(data)`: Agrega un nuevo nodo con los datos dados al final de la lista.
+- `get_size()`: Devuelve el número de nodos en la lista.
+- `iter()`: Devuelve un generador que itera sobre los nodos en la lista.
+- `delete(data)`: Elimina el primer nodo en la lista que contiene los datos dados.
+- `search(data)`: Busca un nodo que contenga los datos dados e imprime un mensaje si se encuentra.
+- `clear()`: Elimina todos los nodos de la lista.
+
+### Ejemplo de Uso
+
+El código incluye un ejemplo de cómo crear una lista de reproducción utilizando la lista enlazada. Las canciones se agregan a la lista de reproducción con `append`, y la canción actual se mantiene con una variable separada. La función `print_playlist_and_current_song` imprime todas las canciones en la lista de reproducción y la canción actual.
+
+```python
+playlist = SinglyLinkedList()
+playlist.append('Canción 1')
+playlist.append('Canción 2')
+playlist.append('Canción 3')
+cancion_actual = playlist.tail
+
+def print_playlist_and_current_song(playlist, cancion_actual):
+    print("Lista de reproducción:")
+    for song in playlist.iter():
+        print(song)
+
+    print("\nCanción actual:")
+    print(cancion_actual.data)
+
+print_playlist_and_current_song(playlist, cancion_actual)
+```
+```bash
+# Terminal
+  Playlist:
+  Song 1
+  Song 2
+  Song 3
+
+  Current song:
+  Song 1
+  ------------------------------
+  Song 1
+  Song 2
+  Song 3
+  Data Song 3 found!
+```
+
+El código también incluye ejemplos comentados de cómo eliminar una canción de la lista de reproducción con `delete`, limpiar la lista de reproducción con `clear`, iterar sobre las canciones en la lista de reproducción con `iter`, y buscar una canción en la lista de reproducción con `search`.
