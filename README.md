@@ -237,3 +237,72 @@ print_playlist_and_current_song(playlist, cancion_actual)
 ```
 
 El código también incluye ejemplos comentados de cómo eliminar una canción de la lista de reproducción con `delete`, limpiar la lista de reproducción con `clear`, iterar sobre las canciones en la lista de reproducción con `iter`, y buscar una canción en la lista de reproducción con `search`.
+
+# Implementación de Lista Doble Enlazada en Python
+
+Este repositorio contiene una implementación simple de una lista doblemente enlazada en Python. El código define dos clases: `Node` y `TowWayNode`.
+
+## Clase Node
+
+La clase `Node` representa un solo nodo en una lista enlazada simple. Cada nodo tiene dos atributos:
+
+- `data`: Los datos almacenados en el nodo.
+- `next`: El siguiente nodo en la lista.
+
+Aquí está el código para la clase `Node`:
+
+```python
+class Node(object):
+    def __init__(self, data, next=None):
+        self.data = data
+        self.next = next
+```
+
+## Clase TowWayNode
+La clase TowWayNode extiende la clase Node para crear un nodo para una lista doblemente enlazada. Además de los atributos data y next de la clase Node, un TowWayNode también tiene un atributo previous, que apunta al nodo anterior en la lista.
+
+Aquí está el código para la clase TowWayNode:
+```python
+class TowWayNode(Node):
+    def __init__(self, data, previous=None, next=None):
+        Node.__init__(self, data, next)
+        self.previous = previous
+```
+Las listas doblemente enlazadas son útiles en muchas situaciones en las que se necesita una estructura de datos flexible y eficiente. Permiten la inserción y eliminación eficiente de elementos en ambas direcciones, lo que las hace ideales para ciertos tipos de problemas de manipulación de datos. Además, al mantener referencias tanto al nodo anterior como al siguiente, las listas doblemente enlazadas facilitan la navegación y manipulación de la lista en ambas direcciones.
+
+## Ejemplo de Uso
+
+Aquí hay un ejemplo de cómo puedes usar estas clases para crear una lista doblemente enlazada:
+
+```python
+# Crear nodos
+node1 = TowWayNode("data1")
+node2 = TowWayNode("data2")
+node3 = TowWayNode("data3")
+
+# Enlazar nodos
+node1.next = node2
+node2.previous = node1
+node2.next = node3
+node3.previous = node2
+
+# Ahora tenemos una lista doblemente enlazada con 3 nodos
+# Podemos recorrerla en ambas direcciones
+current_node = node1
+while current_node is not None:
+    print(current_node.data)
+    current_node = current_node.next
+
+current_node = node3
+while current_node is not None:
+    print(current_node.data)
+    current_node = current_node.previous
+
+# Terminal
+
+data1
+data2
+data3
+data3
+data2
+data1
