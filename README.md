@@ -306,3 +306,9 @@ data3
 data3
 data2
 data1
+```
+
+## Stack
+Un stack (o pila) es una estructura de datos que sigue la regla "último en entrar, primero en salir" (LIFO, por sus siglas en inglés). Imagina una pila de platos: puedes poner un nuevo plato en la parte superior (esto se llama "push") y sólo puedes quitar el plato que está en la parte superior (esto se llama "pop"). No puedes quitar un plato que esté en medio de la pila sin quitar primero los platos que están encima. Eso es básicamente cómo funciona un stack en programación.
+
+![stack](./README_img/stack.png)
