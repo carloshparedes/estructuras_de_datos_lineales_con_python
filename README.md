@@ -312,3 +312,28 @@ data1
 Un stack (o pila) es una estructura de datos que sigue la regla "último en entrar, primero en salir" (LIFO, por sus siglas en inglés). Imagina una pila de platos: puedes poner un nuevo plato en la parte superior (esto se llama "push") y sólo puedes quitar el plato que está en la parte superior (esto se llama "pop"). No puedes quitar un plato que esté en medio de la pila sin quitar primero los platos que están encima. Eso es básicamente cómo funciona un stack en programación.
 
 ![stack](./README_img/stack.png)
+
+# Stack Class
+
+La clase `Stack` es una implementación de una pila en Python. Una pila es una estructura de datos que sigue el principio de "último en entrar, primero en salir" (LIFO). 
+
+Aquí hay un ejemplo de cómo usar la clase `Stack`:
+
+```python
+food = Stack()
+food.push('apple')
+food.push('banana')
+food.push('cherry')
+```
+En este ejemplo, creamos una nueva pila llamada food y agregamos tres elementos a la pila ('apple', 'banana', y 'cherry').
+```python
+print(f'food.pop() : ', food.pop())  # Output: cherry
+print(f'food.peek() : ', food.peek())  # Output: banana
+food.clear()  # This will clear the stack Output: None
+```
+
+El método `pop` elimina el elemento superior de la pila y lo devuelve. En este caso, imprime 'cherry', que es el último elemento que agregamos a la pila.
+
+El método `peek` devuelve el elemento superior de la pila sin eliminarlo. En este caso, imprime 'banana', que es ahora el elemento superior de la pila después de haber eliminado 'cherry'.
+
+El método `clear` elimina todos los elementos de la pila. Después de llamar a este método, la pila food está vacía.
