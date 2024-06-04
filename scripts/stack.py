@@ -33,12 +33,12 @@ class Stack:
     def is_empty(self):
         return self.size == 0
 
-food = Stack()
-food.push('apple')
-food.push('banana')
-food.push('cherry')
+# food = Stack()
+# food.push('apple')
+# food.push('banana')
+# food.push('cherry')
 
-print(f'food.pop() : ', food.pop())  # Output: cherry
-print(f'food.peek() : ', food.peek())  # Output: banana
-print(f'food.clear() : ', food.clear())  # Output: None
+# print(f'food.pop() : ', food.pop())  # Output: cherry
+# print(f'food.peek() : ', food.peek())  # Output: banana
+# print(f'food.clear() : ', food.clear())  # Output: None
 
