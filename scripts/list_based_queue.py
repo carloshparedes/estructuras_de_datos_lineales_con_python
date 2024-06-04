@@ -22,6 +22,6 @@ food = listQueue()
 food.enqueue('apple')
 food.enqueue('banana')
 food.enqueue('cherry')
-print(f'food.traverse() : ', food.traverse())  # Output: apple, banana, cherry
+print(f'food.traverse() : ', food.traverse())  # Output: cherry, banana, apple 
 food.dequeue()
-print(f'food.traverse() : ', food.traverse())  # Output: apple, banana, cherry
+print(f'food.traverse() : ', food.traverse())  # Output: cherry, banana, 
