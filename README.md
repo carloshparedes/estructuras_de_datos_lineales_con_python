@@ -360,3 +360,27 @@ La clase `Queue` tiene dos métodos principales:
 ## Ejemplo de uso
 
 El archivo `stack_based_queue.py` también contiene un ejemplo de cómo usar la clase `Queue`. En este ejemplo, se crea una nueva instancia de `Queue` llamada `numbers`, y luego se agregan los números 5, 6 y 7 a la cola. Luego, se imprime el estado de `inbound_stack`, se elimina un elemento de la cola y se imprimen los estados de `inbound_stack` y `outbound_stack` después de la operación de eliminación.
+
+## node_based_queue.py
+
+## Descripción
+
+El archivo `node_based_queue.py` contiene una implementación de una cola utilizando nodos enlazados. Esta es una técnica común en ciertas situaciones de programación para implementar una cola con las propiedades de "primero en entrar, primero en salir" (FIFO) utilizando una lista enlazada.
+
+## Clase Queue
+
+La clase `Queue` tiene tres atributos principales: `head`, `tail` y `count`.
+
+- `head` es el primer nodo en la cola.
+- `tail` es el último nodo en la cola.
+- `count` es el número de nodos en la cola.
+
+La clase `Queue` tiene dos métodos principales:
+
+- `enqueue(self, data)`: Este método toma un argumento `data` y lo agrega al final de la cola, creando un nuevo nodo con `data` y ajustando los enlaces de los nodos y `tail` según sea necesario.
+
+- `dequeue(self)`: Este método no toma argumentos y elimina y devuelve el elemento que está al frente de la cola. Ajusta los enlaces de los nodos y `head` según sea necesario.
+
+## Ejemplo de uso
+
+El archivo `node_based_queue.py` también contiene un ejemplo de cómo usar la clase `Queue`. En este ejemplo, se crea una nueva instancia de `Queue` llamada `food`, y luego se agregan 'eggs', 'ham' y 'spam' a la cola. Luego, se imprimen varios atributos de la cola, como `head.data`, `tail.data`, `count`, `head.next.data`, y `tail.previous.data`.
