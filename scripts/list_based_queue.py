@@ -18,10 +18,10 @@ class listQueue:
         for i in range(total_items):
             print(self.items[i])
 
-food = listQueue()
-food.enqueue('apple')
-food.enqueue('banana')
-food.enqueue('cherry')
-print(f'food.traverse() : ', food.traverse())  # Output: cherry, banana, apple 
-food.dequeue()
-print(f'food.traverse() : ', food.traverse())  # Output: cherry, banana, 
+# food = listQueue()
+# food.enqueue('apple')
+# food.enqueue('banana')
+# food.enqueue('cherry')
+# print(f'food.traverse() : ', food.traverse())  # Output: cherry, banana, apple 
+# food.dequeue()
+# print(f'food.traverse() : ', food.traverse())  # Output: cherry, banana, 
