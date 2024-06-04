@@ -337,3 +337,26 @@ El método `pop` elimina el elemento superior de la pila y lo devuelve. En este 
 El método `peek` devuelve el elemento superior de la pila sin eliminarlo. En este caso, imprime 'banana', que es ahora el elemento superior de la pila después de haber eliminado 'cherry'.
 
 El método `clear` elimina todos los elementos de la pila. Después de llamar a este método, la pila food está vacía.
+
+# README para stack_based_queue.py
+
+## Descripción
+
+El archivo `stack_based_queue.py` contiene una implementación de una cola utilizando dos pilas. Esta es una técnica común en ciertas situaciones de programación para implementar una cola con las propiedades de "primero en entrar, primero en salir" (FIFO) utilizando pilas que tienen la propiedad de "último en entrar, primero en salir" (LIFO).
+
+## Class Queue
+
+La clase `Queue` tiene dos atributos principales: `inbound_stack` y `outbound_stack`, que son listas que actúan como nuestras dos pilas.
+
+- `inbound_stack` se utiliza para almacenar nuevos elementos que se agregan a la cola.
+- `outbound_stack` se utiliza para eliminar elementos de la cola.
+
+La clase `Queue` tiene dos métodos principales:
+
+- `enqueue(self, data)`: Este método toma un argumento `data` y lo agrega a `inbound_stack`, efectivamente agregándolo al final de la cola.
+
+- `dequeue(self)`: Este método no toma argumentos y elimina y devuelve el elemento que está al frente de la cola. Si `outbound_stack` está vacío, todos los elementos de `inbound_stack` se mueven a `outbound_stack`, invirtiendo el orden de los elementos. Luego, el elemento superior de `outbound_stack` se desapila y se devuelve.
+
+## Ejemplo de uso
+
+El archivo `stack_based_queue.py` también contiene un ejemplo de cómo usar la clase `Queue`. En este ejemplo, se crea una nueva instancia de `Queue` llamada `numbers`, y luego se agregan los números 5, 6 y 7 a la cola. Luego, se imprime el estado de `inbound_stack`, se elimina un elemento de la cola y se imprimen los estados de `inbound_stack` y `outbound_stack` después de la operación de eliminación.
