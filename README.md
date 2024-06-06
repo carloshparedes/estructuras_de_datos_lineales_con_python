@@ -1,4 +1,43 @@
-# Suma Piramidal
+# Music Player
+Este es un simple reproductor de música que utiliza una cola basada en nodos para gestionar las pistas de música.
+
+```bash
+#podras ver cada canción reproducirse en la terminal
+Count 6
+Playing white whistle
+Playing butter butter
+Playing Oh black star
+Playing Watch that chicken
+Playing Don't go
+Playing Fin
+```
+## Cómo ejecutar el código
+Para ejecutar este código, sigue estos pasos:
+
+Asegúrate de tener Python instalado en tu máquina. Este código fue escrito en Python, por lo que necesitarás tenerlo instalado para ejecutarlo.
+
+Descarga el archivo music_player.py y el archivo node_based_queue.py (que contiene la implementación de la cola basada en nodos) en la misma carpeta.
+
+Abre una terminal y navega hasta la carpeta donde descargaste los archivos.
+
+Ejecuta el siguiente comando para ejecutar el código:
+```bash
+python music_player.py
+```
+## Cómo funciona
+El código define dos clases: Track y MediaPlayerQueue.
+
+La clase Track representa una pista de música. Cada pista tiene un título y una duración aleatoria entre 5 y 6 segundos.
+
+La clase MediaPlayerQueue es una cola que gestiona las pistas de música. Puedes añadir pistas a la cola con el método add_track y reproducir todas las pistas en la cola con el método play.
+
+El código luego crea varias pistas y las añade a la cola del reproductor de música. Finalmente, reproduce todas las pistas en la cola.
+
+## Nota
+Este código es solo un ejemplo y no reproduce música real. En su lugar, "reproduce" una pista al imprimir su título y luego pausar la ejecución del programa durante la duración de la pista.
+
+
+## Suma Piramidal
 
 Este script de Python, `pyramid_sum.py`, contiene una función recursiva `pyramid_sum(lower, upper, margin=0)` que calcula la suma de los enteros desde `lower` hasta `upper`.
 

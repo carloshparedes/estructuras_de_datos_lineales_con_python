@@ -35,19 +35,19 @@ class Queue:
         
         return current.data
     
-food = Queue()
+# food = Queue()
 
-food.enqueue('eggs')
-food.enqueue('ham')
-food.enqueue('spam')
+# food.enqueue('eggs')
+# food.enqueue('ham')
+# food.enqueue('spam')
 
-print(food.head.data)
-print(food.tail.data)
-print(food.count)
-print('-----------------')
-print(food.head.next.data)
-print(food.tail.data)
-print(food.tail.previous.data)
-print('-----------------')
-print(food.dequeue())
-print(food.head.data)
+# print(food.head.data)
+# print(food.tail.data)
+# print(food.count)
+# print('-----------------')
+# print(food.head.next.data)
+# print(food.tail.data)
+# print(food.tail.previous.data)
+# print('-----------------')
+# print(food.dequeue())
+# print(food.head.data)
